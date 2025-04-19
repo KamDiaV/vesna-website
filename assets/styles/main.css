@@ -1,5 +1,38 @@
 @charset "UTF-8";
 @import "./normalize.css";
+@font-face {
+  font-family: "Noah";
+  src: url("../fonts/Noahbold.woff2") format("woff2"), url("../fonts/Noahbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noah";
+  font-family: "Noah";
+  src: url("../fonts/Noahregular.woff2") format("woff2"), url("../fonts/Noahregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Marck Script";
+  src: url("../fonts/marckscript.woff2") format("woff2"), url("../fonts/marckscript.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Medium.woff2") format("woff2"), url("../fonts/Geometria-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GeometriaRegular";
+  src: url("../fonts/GeometriaRegular.woff2") format("woff2"), url("../fonts/GeometriaRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
 * {
   margin: 0;
   padding: 0;
@@ -61,39 +94,6 @@ textarea:focus {
   border: 1px solid #545a2f;
 }
 
-@font-face {
-  font-family: "Noah";
-  src: url("../fonts/Noahbold.woff2") format("woff2"), url("../fonts/Noahbold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noah";
-  font-family: "Noah";
-  src: url("../fonts/Noahregular.woff2") format("woff2"), url("../fonts/Noahregular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Marck Script";
-  src: url("../fonts/marckscript.woff2") format("woff2"), url("../fonts/marckscript.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Geometria";
-  src: url("../fonts/Geometria-Medium.woff2") format("woff2"), url("../fonts/Geometria-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "GeometriaRegular";
-  src: url("../fonts/GeometriaRegular.woff2") format("woff2"), url("../fonts/GeometriaRegular.woff") format("woff");
-  font-style: normal;
-  font-weight: 400;
-}
 .header--common {
   position: relative;
   height: 501px;

@@ -1,16 +1,14 @@
-// import files with mixins and variables // base and media
+// Normalize/Reset CSS
+@import "./normalize.css";
+
+// Setups
+@import "../fonts/fonts";
 @import "./vars";
 @import "./mixins";
 @import "./media";
 @import "./base";
 
-// import fonts
-@import "../fonts/fonts";
-
-// link normalize
-@import "./normalize.css";
-
-// common blocks
+// Common blocks
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/buttons";
@@ -24,7 +22,7 @@
 @import "./blocks/services_order-service.scss";
 @import "./blocks/main_garden-guide";
 
-// link blocks main page
+// Blocks main page
 @import "./blocks/main_hero";
 @import "./blocks/main_garden";
 @import "./blocks/main_landscape";
@@ -36,17 +34,17 @@
 @import "./blocks/main_faq";
 @import "./blocks/main_questions";
 
-// link blocks portfolio page
+// Blocks portfolio page
 @import "./blocks/portfolio";
 
-// link blocks project page
+// Blocks project page
 @import "./blocks/project";
 
-// link blocks services page
+// Blocks services page
 @import "./blocks/services";
 
-// link blocks service page
+// Blocks service page
 @import "./blocks/service";
 
-// link blocks contacts page
+// Blocks contacts page
 @import "./blocks/contacts"; 
