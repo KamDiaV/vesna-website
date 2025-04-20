@@ -186,8 +186,7 @@ textarea:focus {
 
 .header__nav-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 76px;
 }
 

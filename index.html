@@ -10,7 +10,7 @@
   <header class="header hero">
     <section class="header__first-line">
       <div class="header__logo">
-        <a href="./index.html" class="header__logo-link" target="_blank">
+        <a href="./index.html" class="header__logo-link">
           <img
             src="./assets/icons/header-logo.svg"
             alt="логотип компании Весна"
@@ -38,7 +38,7 @@
         <a href="tel:+79218888888" class="button header__tel-link">+7 (921) 888 88 88</a>
           <!-- Кнопка для открытия формы -->
         <div class="popup-open__button-container">
-            <button class="button button--transparent" onclick="openWindow('consult__popupWindow','consult__overlay')">
+            <button type="button" class="button button--transparent" onclick="openWindow('consult__popupWindow','consult__overlay')">
               Бесплатная консультация
             </button>
         </div>
@@ -53,7 +53,7 @@
             </button>
             <h2 class="popup__title">Закажите консультацию</h2>
             <p class="popup__description">Менеджер перезвонит Вам в&nbsp;ближайшее время</p>
-            <form action="submit" class="form">
+            <form action="#" method="POST" class="form">
               <div class="form__input-group">
                 <div class="form__input-container">
                   <input
@@ -105,6 +105,7 @@
                 class="button button--olive-large">
                   Перезвоните мне
                 </button>
+              </div>
             </form>
         </div>
     </div>
@@ -144,7 +145,7 @@
         </ul>
       </div>
     </section>
-    <div class="hero__container">
+    <!-- <div class="hero__container">
       <div class="hero__content">
         <p class="hero__subtitle">Ландшафтная студия VESNA</p>
         <h1 class="hero__title">Создаем авторские ландшафты с вашим характером</h1>
@@ -172,7 +173,7 @@
           <span class="hero__total-slides">03</span>
         </div>
       </div>
-    </div>
+    </div> -->
   </header>
 
   <main>

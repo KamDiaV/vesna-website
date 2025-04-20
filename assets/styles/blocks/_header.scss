@@ -1,10 +1,9 @@
 .header--common {
   position: relative;
-  height: 501px; // Задаем высоту первого экрана
+  height: 501px;
   background: url("../img/serviceHeroBg.jpg") no-repeat center center / cover;
   margin-bottom: 60px;
 
-  // контейнер с заголовком
   &__container {
     display: flex;
     flex-direction: column;
@@ -15,12 +14,10 @@
   &__container--col {
     gap: 44px;
   }
-  // сам заголовок
   &__title {
     @include h1;
     color: $white;
   }
-  // подзаголовок для страницы портфолио
   &__subtitle {
     @include h4;
     color: $white;
@@ -32,7 +29,7 @@
     }
   }
   @include phones {
-    height: 324px; // Задаем высоту первого экрана
+    height: 324px; 
     margin-bottom: 13px;
     background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center /
       cover;
@@ -62,8 +59,6 @@
 
 .header {
   position: relative;
-  // тестовый фон, чтобы было видно лого и навигацию
-  // background-color: rgb(33, 112, 64);
 }
 
 .header__first-line {
@@ -83,8 +78,7 @@
 
 .header__nav-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 76px;
 }
 
@@ -119,7 +113,6 @@
   cursor: pointer;
   z-index: 3;
 }
-// иконка бургер-меню с помощью спанов и псевдоэлементов
 .hamburger-menu__icon,
 .hamburger-menu__icon::before,
 .hamburger-menu__icon::after {
@@ -178,8 +171,6 @@
   padding-bottom: 59px;
 }
 
-// адаптив для экранов с разрешением не более 768px
-
 @include tablets {
   .header {
     &__nav,
@@ -222,8 +213,6 @@
     }
   }
 }
-
-// адаптив для экранов с разрешением не более 440px
 
 @include phones {
   .header {
