@@ -1,6 +1,6 @@
 # Vesna | Landscape Studio
 
-**Vesna** is a multi-page static website for a landscape design studio, built following the BEM methodology and responsive design principles. The site showcases services in landscape planning, greening, and site improvement, features a portfolio of completed projects, and includes forms to request a free consultation or callback.
+**Vesna** is a multi-page website for a landscape design studio, built following the BEM methodology and responsive design principles. The site showcases services in landscape planning, greening, and site improvement, features a portfolio of completed projects, and includes forms to request a free consultation or callback.
 
 ---
 
@@ -26,12 +26,6 @@
 ---
 
 ## Built by  
-
-- [KamDiaV](https://github.com/KamDiaV)
-- [anastasiia-avdeeva](https://github.com/)
-- [DaryaZhuravleva](https://github.com/DaryaZhuravleva)
-- [dianniii](https://github.com/dianniii)
-
 
 [![Contributors](https://contrib.rocks/image?repo=KamDiaV/vesna-website)](https://github.com/KamDiaV/vesna-website/graphs/contributors)
 
