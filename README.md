@@ -27,7 +27,13 @@
 
 ## Built by  
 
-[![Contributors](https://contrib.rocks/image?repo=KamDiaV/vesna-website)](https://github.com/KamDiaV/vesna-website/graphs/contributors)
+<a href="https://github.com/KamDiaV/vesna-website/graphs/contributors">
+  <img
+    src="https://contrib.rocks/image?repo=KamDiaV/vesna-website&columns=8"
+    alt="Contributors"
+    width="216"
+  />
+</a>
 
 ---
 
