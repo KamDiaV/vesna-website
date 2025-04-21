@@ -908,7 +908,7 @@ textarea:focus {
   width: 678px;
   padding: 16px 16px 62px;
   position: fixed;
-  top: 179px;
+  top: 104px;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
@@ -1525,11 +1525,18 @@ textarea:focus {
   color: #ffffff;
   margin-bottom: 211px;
 }
+@media screen and (max-width: 440px) {
+  .hero {
+    background: url("../img/hero-bg-phones.jpg") no-repeat center center/cover;
+    margin-bottom: 47px;
+    height: 566px;
+  }
+}
 .hero::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -2%;
   transform: translateY(-50%);
   width: 483px;
   height: 363px;
@@ -1539,16 +1546,47 @@ textarea:focus {
   z-index: 1;
   pointer-events: none;
 }
+@media screen and (max-width: 768px) {
+  .hero::before {
+    top: 75%;
+    right: 0;
+    width: 281px;
+    height: 231px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero::before {
+    top: 60%;
+    right: -5%;
+    width: 181px;
+    height: 131px;
+  }
+}
 .hero__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 950px;
-  margin: 0 290px;
+  min-height: 60vh;
+  padding: 0 clamp(1rem, 8vw, 290px);
+  gap: clamp(1rem, 15vh, 300px);
+}
+@media screen and (max-width: 1440px) {
+  .hero__container {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero__container {
+    padding: 0 16px;
+    min-height: auto;
+    margin-bottom: 47px;
+    margin-top: 112px;
+    gap: 132px;
+  }
 }
 .hero__content {
   max-width: 980px;
-  margin-top: 282px;
+  margin-top: auto;
 }
 .hero__subtitle {
   font-family: "Noah", sans-serif;
@@ -1558,6 +1596,16 @@ textarea:focus {
   font-size: 24px;
   margin-bottom: 12px;
 }
+@media screen and (max-width: 440px) {
+  .hero__subtitle {
+    font-family: "Noah", sans-serif;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
 .hero__title {
   font-family: "Noah", sans-serif;
   line-height: normal;
@@ -1566,6 +1614,17 @@ textarea:focus {
   font-size: 70px;
   margin-bottom: 12px;
 }
+@media screen and (max-width: 440px) {
+  .hero__title {
+    font-family: "Noah", sans-serif;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+}
 .hero__description {
   font-family: "Noah", sans-serif;
   line-height: normal;
@@ -1573,16 +1632,21 @@ textarea:focus {
   font-weight: 400;
   font-size: 48px;
 }
+@media screen and (max-width: 440px) {
+  .hero__description {
+    font-family: "Noah", sans-serif;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
 .hero__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.hero__footer > .hero__project-link {
-  margin-right: 325px;
-}
-.hero__footer > .hero__arrows {
-  margin-right: 228px;
+  gap: clamp(1rem, 8vw, 5rem);
+  margin-bottom: 40px;
 }
 .hero__project-link {
   font-family: "Noah", sans-serif;
@@ -1602,6 +1666,16 @@ textarea:focus {
 }
 .hero__project-link:hover {
   transform: scale(1.05);
+}
+@media screen and (max-width: 440px) {
+  .hero__project-link {
+    font-family: "Noah", sans-serif;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 17px 7px;
+  }
 }
 .hero__arrow {
   margin-left: 21px;
@@ -1626,9 +1700,19 @@ textarea:focus {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .hero__project-image {
+    display: none;
+  }
+}
 .hero__arrows {
   display: flex;
-  gap: 149px;
+  gap: clamp(1rem, 8vw, 149px);
+}
+@media screen and (max-width: 768px) {
+  .hero__arrows {
+    display: none;
+  }
 }
 .hero__arrow-btn {
   width: 33px;
@@ -1663,6 +1747,11 @@ textarea:focus {
   line-height: normal;
   font-style: normal;
 }
+@media screen and (max-width: 1440px) {
+  .hero__pagination {
+    display: none;
+  }
+}
 .hero__current-slide {
   font-weight: 700;
 }
@@ -1675,123 +1764,6 @@ textarea:focus {
 }
 .hero__total-slides {
   font-weight: 300;
-}
-@media screen and (max-width: 768px) {
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 75%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 281px;
-    height: 231px;
-    background-image: url("../img/hero-decoration-bg.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
-    pointer-events: none;
-  }
-  .hero__container {
-    margin: 0 20px;
-    margin-bottom: 108px;
-  }
-  .hero__arrows {
-    display: none;
-  }
-  .hero__pagination {
-    display: none;
-  }
-}
-@media screen and (max-width: 440px) {
-  .hero {
-    background: url("../img/hero-bg-phones.jpg") no-repeat center center/cover;
-    margin-bottom: 47px;
-    height: 566px;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 181px;
-    height: 131px;
-    background-image: url("../img/hero-decoration-bg-phones.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
-    pointer-events: none;
-  }
-  .hero__container {
-    margin: 0 16px;
-    margin-bottom: 47px;
-    height: 470px;
-  }
-  .hero__content {
-    margin-top: 153px;
-  }
-  .hero__subtitle {
-    font-family: "Noah", sans-serif;
-    line-height: normal;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .hero__title {
-    font-family: "Noah", sans-serif;
-    line-height: normal;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  .hero__description {
-    font-family: "Noah", sans-serif;
-    line-height: normal;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-  }
-  .hero__project-link {
-    font-family: "Noah", sans-serif;
-    line-height: normal;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 17px 7px;
-    background: rgba(99, 83, 62, 0.52);
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
-    color: #ffffff;
-    transition: transform 0.3s, background 0.3s;
-  }
-  .hero__project-link:hover {
-    transform: scale(1.05);
-  }
-  .hero__arrow {
-    margin-left: 11px;
-    transition: transform 0.3s;
-  }
-  .hero__arrow img {
-    height: 8px;
-    width: 14px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .hero__project-image {
-    margin-left: 11px;
-    width: 46px;
-    height: 47px;
-    overflow: hidden;
-  }
-  .hero__project-image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 
 .garden {

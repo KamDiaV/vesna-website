@@ -4,11 +4,17 @@
   color: $white;
   margin-bottom: 211px;
 
+  @include phones {
+    background: url('../img/hero-bg-phones.jpg') no-repeat center center / cover;
+    margin-bottom: 47px;
+    height: 566px;
+  }
+
   &::before { 
     content: ''; 
     position: absolute; 
     top: 50%; 
-    right: 0; 
+    right: -2%; 
     transform: translateY(-50%); 
     width: 483px;
     height: 363px; 
@@ -17,47 +23,83 @@
     background-repeat: no-repeat; 
     z-index: 1;
     pointer-events: none; 
+
+      @include tablets {
+        top: 75%;
+        right: 0;  
+        width: 281px;
+        height: 231px; 
+      }
+
+      @include phones {
+        top: 60%; 
+        right: -5%; 
+        width: 181px;
+        height: 131px; 
+      }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 950px;
-    margin: 0 290px;
+    min-height: 60vh;
+    padding: 0 clamp(1rem, 8vw, 290px);
+    gap: clamp(1rem, 15vh, 300px);
+
+    @include desktop {
+      margin-top: 100px;
+    }
+
+    @include phones {
+      padding: 0 16px; 
+      min-height: auto; 
+      margin-bottom: 47px;
+      margin-top: 112px;
+      gap: 132px;
+    }
   }
 
   &__content {
     max-width: 980px;
-    margin-top: 282px;
+    margin-top: auto;    
   }
 
   &__subtitle {
     @include h5;
     margin-bottom: 12px;
+
+    @include phones {
+      @include font-size-smallest;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
     @include h1;
     margin-bottom: 12px;
+
+    @include phones {
+      @include h5;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
   }
 
   &__description {
     @include h3;
+
+    @include phones {
+      @include h6;
+    }
   }
 
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    & > .hero__project-link {
-      margin-right: 325px; // Расстояние до hero__arrows
-    }
-  
-    & > .hero__arrows {
-      margin-right: 228px; // Расстояние до hero__pagination
-    }
+    gap: clamp(1rem, 8vw, 5rem);
+    margin-bottom: 40px;
   }
 
   &__project-link {
@@ -66,13 +108,18 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    background: rgba($brown, 0.52); // Цвет с прозрачностью 52%
-    backdrop-filter: blur(4px); // Размытие
+    background: rgba($brown, 0.52); 
+    backdrop-filter: blur(4px); 
     color: $white;
     transition: transform 0.3s, background 0.3s;
 
       &:hover {
         transform: scale(1.05);
+      }
+
+      @include phones {
+        @include font-size-smallest;
+        padding: 17px 7px;
       }
   }
 
@@ -99,11 +146,19 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__arrows {
     display: flex;
-    gap: 149px;
+    gap: clamp(1rem, 8vw, 149px);
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__arrow-btn {
@@ -138,7 +193,12 @@
     display: flex;
     align-items: center;
     @include geometria-400-font;
+
+    @include desktop {
+      display: none;
+    }
   }
+
   &__current-slide {
     font-weight: 700;
   }
@@ -148,125 +208,11 @@
     align-items: center;
   
     img {
-      margin: 0 5px; // Отступы слева и справа для визуального баланса
+      margin: 0 5px; 
     }
   }
 
   &__total-slides {
     font-weight: 300;
-  }
-
-  @include tablets{
-
-    &::before { 
-      content: ''; 
-      position: absolute; 
-      top: 75%; 
-      right: 0; 
-      transform: translateY(-50%); 
-      width: 281px;
-      height: 231px; 
-      background-image: url('../img/hero-decoration-bg.jpg'); 
-      background-size: contain; 
-      background-repeat: no-repeat; 
-      z-index: 1;
-      pointer-events: none; 
-    }
-
-    &__container{
-      margin: 0 20px; // Уменьшение отступов для планшетов
-      margin-bottom: 108px;
-    }
-
-    &__arrows{
-      display: none;
-    }
-    &__pagination{
-      display: none;
-    }
-  }
-
-  @include phones{
-
-    background: url('../img/hero-bg-phones.jpg') no-repeat center center / cover;
-    margin-bottom: 47px;
-    height: 566px;
-
-    &::before { 
-      content: ''; 
-      position: absolute; 
-      top: 60%; 
-      right: 0; 
-      transform: translateY(-50%); 
-      width: 181px;
-      height: 131px; 
-      background-image: url('../img/hero-decoration-bg-phones.jpg'); 
-      background-size: contain; 
-      background-repeat: no-repeat; 
-      z-index: 1;
-      pointer-events: none; 
-    }
-
-    &__container{
-      margin: 0 16px; // Уменьшение отступов для планшетов
-      margin-bottom: 47px;
-      height: 470px;
-    }
-
-    &__content {
-      margin-top: 153px;
-    }
-
-    &__subtitle {
-      @include font-size-smallest;
-      margin-bottom: 10px;
-    }
-  
-    &__title {
-      @include h5;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-  
-    &__description {
-      @include h6;
-    }
-
-    &__project-link {
-      @include font-size-smallest;
-      padding: 17px 7px;
-      background: rgba($brown, 0.52); // Цвет с прозрачностью 52%
-      backdrop-filter: blur(4px); // Размытие
-      color: $white;
-      transition: transform 0.3s, background 0.3s;
-  
-        &:hover {
-          transform: scale(1.05);
-        }
-    }
-
-  &__arrow {
-    margin-left: 11px;
-    transition: transform 0.3s;
-
-    img {
-      height: 8px;
-      width: 14px;
-      object-fit: cover;
-    }
-  }
-
-  &__project-image {
-    margin-left: 11px;
-    width: 46px;
-    height: 47px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
   }
 }
