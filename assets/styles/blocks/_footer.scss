@@ -1,17 +1,40 @@
 .footer {
   background-color: $olive-dark;
+
+  @include tablets {
+    &__container {
+      @include padding-header-footer-768;
+    }
+  }
+
   &__container {
     @include padding-header-footer-1920;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content min-content;
+    grid-template-rows: repeat (2, min-content);
     padding-top: 50px;
     padding-bottom: 30px;
+
+    @include phones {
+      @include padding-header-footer-440;
+      height: auto;
+      grid-template-columns: 1fr;
+      padding-bottom: 20px;
+      row-gap: 24px;
+    }
   }
+
   &__contacts {
     display: grid;
     grid-template-rows: 1fr 2fr;
+
+    @include phones {
+      grid-row: 2/3;
+      grid-column: 1/4;
+      justify-items: center;
+    }
   }
+
   &__contact-item {
     @include header-nav-font;
     line-height: normal;
@@ -19,11 +42,21 @@
     color: $white;
     font-weight: 400;
   }
+
   &__copyright {
     display: grid;
     grid-column: 1/2;
     grid-row: 2/3;
+
+    @include phones {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      align-items: center;
+      justify-items: center;
+      margin-top: 24px;
+    }
   }
+
   &__copyright-link {
     @include h6;
     font-size: $font-size-smallest;
@@ -31,67 +64,54 @@
     display: grid;
     align-items: end;
   }
+
   &__logo {
-    grid-column: 2/2;
+    grid-column: 2/3;
     grid-row: 1/3;
     display: grid;
     justify-content: center;
     align-content: center;
+
+    @include tablets {
+      img {
+        width: 104px;
+        height: auto;
+      }
+    }
+
+    @include phones {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
   }
+
   &__icon {
     display: grid;
     justify-items: end;
-  }
-  &__privacy-policy {
-    display: grid;
-    justify-items: end;
-    align-items: end;
-    color: $white;
-    @include h6;
-    font-size: $font-size-smallest;
-  }
-  // адаптив для 768
-  @include tablets {
-    &__container {
-      @include padding-header-footer-768;
-    }
-  }
-  // адаптив для 440
-  @include phones {
-    &__container {
-      @include padding-header-footer-440;
-      height: auto;
-      grid-template-columns: 1fr;
-      padding-bottom: 20px;
-    }
-    &__contacts {
-      grid-row: 2/3;
-      grid-column: 1/4;
-      justify-items: center;
-    }
-    &__copyright {
-      grid-column: 1/2;
-      grid-row: 3/4;
-    }
-    &__logo {
-      grid-row: 1/2;
-      grid-column: 1/2;
-      padding-bottom: 30px;
-    }
-    &__icon {
-      justify-items: end;
+
+    @include phones {
       grid-area: icon;
       grid-column: 1/2;
       grid-row: 2/3;
       justify-content: center;
       padding-top: 30%;
     }
-    &__privacy-policy {
+  }
+
+  &__privacy-policy {
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    text-align: right;
+    color: $white;
+    @include h6;
+    font-size: $font-size-smallest;
+
+    @include phones {
       grid-column: 1/2;
       grid-row: 3/4;
-      align-items: start;
-      justify-items: start;
-      padding-top: 20%;
+      align-items: center;
+      justify-items: center;
       padding-bottom: 30px;
     }
   }

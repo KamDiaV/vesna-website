@@ -14,7 +14,7 @@
     content: ''; 
     position: absolute; 
     top: 50%; 
-    right: -2%; 
+    right: 0; 
     transform: translateY(-50%); 
     width: 483px;
     height: 363px; 
@@ -26,14 +26,12 @@
 
       @include tablets {
         top: 75%;
-        right: 0;  
         width: 281px;
         height: 231px; 
       }
 
       @include phones {
         top: 60%; 
-        right: -5%; 
         width: 181px;
         height: 131px; 
       }
