@@ -1,7 +1,3 @@
-// .header {
-//   background-color: black; // чтобы было видно кнопку Бесплатная консультация при тестах
-// }
-
 .popup-open__button-container {
   text-align: center;
 }
@@ -14,7 +10,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(20px); /* размытие */
+  backdrop-filter: blur(20px);
   z-index: 11;
 }
 
@@ -107,7 +103,6 @@
 @include phones {
   .popup {
     &__wrapper {
-      //   width: 320px;
       width: 100%;
       padding-bottom: 90px;
       top: 0px;
